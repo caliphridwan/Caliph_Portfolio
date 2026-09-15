@@ -25,7 +25,7 @@ export const profile = {
   ],
   location: "Ilorin, Nigeria — open to remote, any timezone",
   tagline:
-    "I design, build, and automate — from a Figma file to a deployed app to the workflow that keeps it running itself.",
+    "I design, build, and automate — from a mere imagination to a deployed app to the workflow that keeps it running itself.",
   email: "caliphridwan93@gmail.com",
   resumeUrl: "/resume.pdf",
   socials: [
@@ -40,7 +40,8 @@ export const about = {
   paragraphs: [
     "I'm a multidisciplinary builder who moves comfortably between four roles most teams hire separately for: I automate the repetitive parts of a business with AI, I build the product itself end-to-end, I make sense of the data it produces, and I design the interface people actually see.",
     "That range means I can take a project from a rough idea to a shipped, measurable result without a handoff — which is exactly what small remote teams and lean startups need most.",
-    "Replace this paragraph with 2–3 sentences about your actual journey: how you got into these fields, what kind of teams you like working with, and what you're looking for next.",
+    "With experience training and mentoring hundreds of students in front-end web development, I have built strong capabilities in teaching, leadership, mentorship, administration, and team coordination.",
+    "I bring a proven ability to communicate clearly, manage responsibilities effectively, and support individuals and teams toward achieving their goals.",
   ],
   stats: [
     { value: "4+", label: "Disciplines, one workflow" },
@@ -53,11 +54,8 @@ export const skills: { discipline: Discipline; items: string[] }[] = [
   {
     discipline: "ai",
     items: [
-      "n8n / Zapier / Make",
-      "LangChain & LangGraph",
+      " Zapier / Make /n8n",
       "OpenAI / Claude / Gemini APIs",
-      "RAG pipelines & vector DBs",
-      "Python scripting & scheduling",
       "Workflow & prompt design",
     ],
   },
@@ -67,7 +65,7 @@ export const skills: { discipline: Discipline; items: string[] }[] = [
       "React & Next.js",
       "Node.js / Express",
       "TypeScript",
-      "PostgreSQL / MongoDB",
+      "PostgreSQL / MongoDB /mySQL",
       "REST & GraphQL APIs",
       "CI/CD & cloud deploys (Vercel, AWS)",
     ],
@@ -77,9 +75,7 @@ export const skills: { discipline: Discipline; items: string[] }[] = [
     items: [
       "SQL & data modeling",
       "Python (Pandas, NumPy)",
-      "Power BI / Tableau",
-      "A/B testing & statistics",
-      "Data cleaning & ETL",
+      "Excel/Tableau",
       "Dashboarding & reporting",
     ],
   },
@@ -89,9 +85,7 @@ export const skills: { discipline: Discipline; items: string[] }[] = [
       "Figma (UI/UX & prototyping)",
       "Adobe Photoshop & Illustrator",
       "Brand & identity systems",
-      "Design systems & tokens",
-      "Motion & micro-interactions",
-      "Typography & layout",
+      
     ],
   },
 ];
@@ -111,17 +105,17 @@ export const projects: Project[] = [
     title: "Support-ticket triage automation",
     discipline: "ai",
     summary:
-      "An n8n + GPT pipeline that reads incoming support emails, classifies urgency, drafts a first response, and routes edge cases to a human — placeholder metric: cut first-response time by 65%.",
-    tags: ["n8n", "OpenAI API", "Webhooks"],
+      "A Zapier + GPT pipeline that reads incoming support emails, classifies urgency, drafts a first response, and routes edge cases to a human — placeholder metric: cut first-response time by 65%.",
+    tags: ["Zapier", "OpenAI API", "Webhooks"],
     href: "#",
     size: "lg",
   },
   {
-    title: "SaaS billing dashboard",
+    title: " Automatic Name Frame system ",
     discipline: "dev",
     summary:
-      "A full-stack Next.js + Postgres app for managing subscriptions, invoices, and usage-based billing, with a Stripe integration end to end.",
-    tags: ["Next.js", "PostgreSQL", "Stripe"],
+      "A full-stack Next.js + Postgres app for managing subscriptions, invoices, and usage-based billing, with a Paystack integration end to end.",
+    tags: ["Next.js", "PostgreSQL", "Paystack"],
     href: "#",
     repo: "#",
     size: "md",
@@ -131,7 +125,7 @@ export const projects: Project[] = [
     discipline: "data",
     summary:
       "Consolidated three years of scattered spreadsheets into one Power BI dashboard leadership now checks weekly — placeholder: replace with your real before/after.",
-    tags: ["Power BI", "SQL", "ETL"],
+    tags: ["Excel", "SQL", "Tableau"],
     href: "#",
     size: "md",
   },
