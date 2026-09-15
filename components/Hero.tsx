@@ -39,7 +39,7 @@ export default function Hero() {
 
         <div className="mt-6 flex flex-wrap items-baseline gap-x-3 font-body text-2xl text-muted sm:text-3xl">
           <span>I build</span>
-          <span className="relative inline-flex h-[1.2em] min-w-[9ch] items-baseline overflow-hidden">
+          <span className="relative inline-flex h-[1.2em] min-w-[12ch] items-baseline overflow-hidden">
             <AnimatePresence mode="wait">
               <motion.span
                 key={words[index].text}
