@@ -124,7 +124,7 @@ export const projects: Project[] = [
     title: "Retail sales performance dashboard",
     discipline: "data",
     summary:
-      "Consolidated three years of scattered spreadsheets into one Power BI dashboard leadership now checks weekly — placeholder: replace with your real before/after.",
+      "Consolidated three years of scattered spreadsheets into one Tableau dashboard leadership now checks weekly — placeholder: replace with your real before/after.",
     tags: ["Excel", "SQL", "Tableau"],
     href: "#",
     size: "md",
@@ -152,7 +152,7 @@ export const projects: Project[] = [
     discipline: "dev",
     summary:
       "A two-sided marketplace front end with real-time messaging and search, built mobile-first and deployed on Vercel.",
-    tags: ["React", "Node.js", "WebSockets"],
+    tags: ["React", "Node.js", "NextJs"],
     href: "#",
     size: "sm",
   },
