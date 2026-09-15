@@ -41,7 +41,7 @@ export const about = {
     "I'm a multidisciplinary builder who moves comfortably between four roles most teams hire separately for: I automate the repetitive parts of a business with AI, I build the product itself end-to-end, I make sense of the data it produces, and I design the interface people actually see.",
     "That range means I can take a project from a rough idea to a shipped, measurable result without a handoff — which is exactly what small remote teams and lean startups need most.",
     "With experience training and mentoring hundreds of students in front-end web development, I have built strong capabilities in teaching, leadership, mentorship, administration, and team coordination.",
-    "I bring a proven ability to communicate clearly, manage responsibilities effectively, and support individuals and teams toward achieving their goals.",
+    "",
   ],
   stats: [
     { value: "4+", label: "Disciplines, one workflow" },
@@ -168,34 +168,43 @@ export type ExperienceItem = {
 
 export const experience: ExperienceItem[] = [
   {
-    period: "2024 — Present",
+    period: "2022 — Present",
     role: "Freelance AI Automation & Full-Stack Developer",
     org: "Self-employed, remote",
     discipline: "ai",
     description:
-      "Placeholder: describe the clients or kinds of projects you take on, and one concrete outcome.",
+      "Designing and building practical digital solutions that combine web development, AI, and workflow automation.",
   },
   {
-    period: "2022 — 2024",
-    role: "Data Analyst",
-    org: "Company name",
+    period: "2023 — 2025",
+    role: "Front-End Web Development Tutor & Mentor",
+    org: "Kofar Durbi Foundation Tech Hub,",
     discipline: "data",
     description:
-      "Placeholder: describe your responsibilities and a measurable result (e.g. a reporting process you automated or a decision your analysis informed).",
+      "Trained and mentored hundreds of students in front-end web development, helping learners develop practical skills and confidence in building websites and web applications.",
   },
   {
-    period: "2020 — 2022",
+    period: "2023 — Present",
+    role: "Data Analyst",
+    org: "Self Employed,",
+    discipline: "data",
+    description:
+      " Used data analysis and visualization techniques to transform raw information into meaningful insights that support better decision-making.",
+  },
+  {
+    period: "2023-Present",
     role: "Graphic Designer",
-    org: "Company name",
+    org: "Self Employed",
     discipline: "design",
     description:
-      "Placeholder: describe the kind of design work, tools used, and any brand or product you shipped.",
+      "Created visual materials and digital designs that communicate ideas effectively and strengthen brand identity using Adobe Photoshop, Canva, & Adobe Illustrator."
+
   },
   {
     period: "Education",
-    role: "Your degree / certification",
-    org: "Institution name",
+    role: "B.sc Computer Science/Economics",
+    org: "Bayero University, Kano.",
     discipline: "dev",
-    description: "Placeholder: add your degree, bootcamp, or relevant certifications.",
+    description: "Best graduating student, Department of Computer Science & Economics, Faculty of Computing.",
   },
 ];
