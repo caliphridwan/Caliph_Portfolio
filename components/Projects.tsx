@@ -97,7 +97,7 @@ export default function Projects() {
         </div>
 
         <p className="mt-8 font-body text-sm text-muted">
-          to be updated
+          
         </p>
       </div>
     </section>
