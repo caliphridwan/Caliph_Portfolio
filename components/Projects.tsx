@@ -97,9 +97,7 @@ export default function Projects() {
         </div>
 
         <p className="mt-8 font-body text-sm text-muted">
-          Replace these with your real projects, screenshots, and links —
-          each one keeps the discipline tag so visitors can filter by what
-          they're hiring for.
+          to be updated
         </p>
       </div>
     </section>

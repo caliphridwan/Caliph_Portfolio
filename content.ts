@@ -124,7 +124,7 @@ export const projects: Project[] = [
     title: "Retail sales performance dashboard",
     discipline: "data",
     summary:
-      "Consolidated three years of scattered spreadsheets into one Tableau dashboard leadership now checks weekly — placeholder: replace with your real before/after.",
+      "Analyzed retail sales data to identify sales trends, top-performing products, customer patterns, and revenue opportunities, transforming raw data into actionable business insights.",
     tags: ["Excel", "SQL", "Tableau"],
     href: "#",
     size: "md",
@@ -148,10 +148,10 @@ export const projects: Project[] = [
     size: "sm",
   },
   {
-    title: "Marketplace mobile-first web app",
+    title: "Traditional Caps E-Commerce Platform",
     discipline: "dev",
     summary:
-      "A two-sided marketplace front end with real-time messaging and search, built mobile-first and deployed on Vercel.",
+      "A modern e-commerce platform designed to showcase and sell premium traditional Nigerian caps, including Zanna, Tangaran, Atiku, Bindo, and other culturally inspired headwear.",
     tags: ["React", "Node.js", "NextJs"],
     href: "#",
     size: "sm",
