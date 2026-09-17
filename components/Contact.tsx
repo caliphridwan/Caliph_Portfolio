@@ -47,9 +47,7 @@ export default function Contact() {
               Let&apos;s work together.
             </h2>
             <p className="mt-4 max-w-prose font-body text-lg text-muted">
-              Open to remote roles and freelance projects across AI
-              automation, full-stack development, data analysis, or design —
-              tell me what you&apos;re building.
+              I'm open to remote opportunities and freelance projects in AI automation and full-stack development. Have a process that could be automated or a product that needs to be built? Let's talk.
             </p>
 
             <div className="mt-10 flex flex-wrap gap-4">

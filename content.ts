@@ -21,7 +21,7 @@ export const profile = {
     "AI Automation Specialist",
     "Full-Stack Web Developer",
     "Data Analyst",
-    "Graphics Designer",
+    "Graphic Designer",
   ],
   location: "Ilorin, Nigeria — open to remote, any timezone",
   tagline:
@@ -44,9 +44,9 @@ export const about = {
     "",
   ],
   stats: [
-    { value: "4+", label: "Disciplines, one workflow" },
+    { value: "4+", label: " Core Disciplines" },
     { value: "20+", label: "Projects shipped" },
-    { value: "100%", label: "Remote-ready" },
+    
   ],
 };
 
@@ -54,7 +54,7 @@ export const skills: { discipline: Discipline; items: string[] }[] = [
   {
     discipline: "ai",
     items: [
-      " Zapier / Make /n8n",
+      " Zapier / Make /API Integration / Webhooks",
       "OpenAI / Claude / Gemini APIs",
       "Workflow & prompt design",
     ],
@@ -113,14 +113,14 @@ export const projects: Project[] = [
     title: " Automatic Name Frame system ",
     discipline: "dev",
     summary:
-      "An elegant full-stack Next.js + Postgres web application for managing subscriptions, invoices, and usage-based billing, with a Paystack integration end to end that generates personalized Islamic name frames featuring Arabic names, meanings, and culturally inspired designs.",
-    tags: ["Next.js", "PostgreSQL", "Paystack"],
+      "An elegant full-stack web application that generates personalized Islamic name frames featuring Arabic names, meanings, and culturally inspired designs.",
+    tags: ["Next.js", "PostgreSQL", "Typescript", "Paystack"],
     href: "https://github.com/caliphridwan/CRFRAMES",
     repo: "#",
     size: "md",
   },
   {
-    title: "Product Sales Categorization & Analysis Dashbaord",
+    title: "Product Sales Categorization & Analysis",
     discipline: "data",
     summary:
       "Analyzed and visualized product data in Tableau, categorizing items such as tea, coffee, and chocolate to uncover sales patterns, product performance, and actionable business insights.",
@@ -170,7 +170,7 @@ export const experience: ExperienceItem[] = [
     period: "2023 — 2025",
     role: "Front-End Web Development Tutor & Mentor",
     org: "Kofar Durbi Foundation Tech Hub,",
-    discipline: "data",
+    discipline: "dev",
     description:
       "Trained and mentored hundreds of students in front-end web development, helping learners develop practical skills and confidence in building websites and web applications.",
   },
@@ -180,7 +180,7 @@ export const experience: ExperienceItem[] = [
     org: "Self Employed,",
     discipline: "data",
     description:
-      " Used data analysis and visualization techniques to transform raw information into meaningful insights that support better decision-making.",
+      " Analyzed and visualized datasets using Excel, SQL, and Tableau to identify trends, product performance, and actionable business insights.",
   },
   {
     period: "2023-Present",
@@ -193,9 +193,9 @@ export const experience: ExperienceItem[] = [
   },
   {
     period: "Education",
-    role: "B.sc Computer Science/Economics",
+    role: "B.sc Computer Science & Economics",
     org: "Bayero University, Kano.",
     discipline: "dev",
-    description: "Best graduating student, Department of Computer Science & Economics, Faculty of Computing.",
+    description: "Best Graduating Student — Department of Computer Science & Economics, Faculty of Computer Science & Information Technology.",
   },
 ];
