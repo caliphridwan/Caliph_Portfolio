@@ -3,8 +3,6 @@
 import { useState } from "react";
 import { profile } from "@/content";
 
-const FORMSPREE_ENDPOINT = "https://formspree.io/f/xbgjnnjo";
-
 type Status = "idle" | "sending" | "sent" | "error";
 
 export default function Contact() {
@@ -16,12 +14,9 @@ export default function Contact() {
   async function handleSend() {
     setStatus("sending");
     try {
-      const res = await fetch(FORMSPREE_ENDPOINT, {
+      const res = await fetch("/api/contact", {
         method: "POST",
-        headers: {
-          Accept: "application/json",
-          "Content-Type": "application/json",
-        },
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ name, email, message }),
       });
 
@@ -47,7 +42,9 @@ export default function Contact() {
               Let&apos;s work together.
             </h2>
             <p className="mt-4 max-w-prose font-body text-lg text-muted">
-              I'm open to remote opportunities and freelance projects in AI automation and full-stack development. Have a process that could be automated or a product that needs to be built? Let's talk.
+              Open to remote roles and freelance projects across AI
+              automation, full-stack development, data analysis, or design —
+              tell me what you&apos;re building.
             </p>
 
             <div className="mt-10 flex flex-wrap gap-4">
@@ -118,7 +115,8 @@ export default function Contact() {
             </button>
             {status === "sent" && (
               <p className="font-body text-xs text-dev">
-                Message sent — thanks for reaching out, I&apos;ll reply soon.
+                Message sent — check your inbox, you&apos;ll get an
+                automatic reply, and I&apos;ll follow up personally soon.
               </p>
             )}
             {status === "error" && (
@@ -129,7 +127,7 @@ export default function Contact() {
             )}
             {status === "idle" && (
               <p className="font-body text-xs text-muted">
-                Looking forward to hearing from you.
+                You&apos;ll get an automatic confirmation email right away.
               </p>
             )}
           </form>
@@ -137,7 +135,7 @@ export default function Contact() {
 
         <div className="mt-24 flex flex-col justify-between gap-4 border-t-3 border-paper/10 pt-8 font-body text-sm text-muted sm:flex-row">
           <span>© {new Date().getFullYear()} {profile.name}</span>
-          <span>Caliph Ridwan</span>
+          <span>Built with Next.js, TypeScript & Tailwind CSS</span>
         </div>
       </div>
     </section>
