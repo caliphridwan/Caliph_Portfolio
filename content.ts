@@ -32,7 +32,7 @@ export const profile = {
     { label: "GitHub", url: "https://github.com/CaliphRidwan" },
     { label: "LinkedIn", url: "https://linkedin.com/in/ridwan-abdulkareem-o-41315b20b" },
     { label: "X", url: "https://x.com/CaliphRidwan" },
-    { label: "Dribbble", url: "https://dribbble.com/your-username" },
+    { label: "Dribbble", url: "https://dribbble.com/caliph-ridwan" },
   ],
 };
 
@@ -66,7 +66,6 @@ export const skills: { discipline: Discipline; items: string[] }[] = [
       "Node.js / Express",
       "TypeScript",
       "PostgreSQL / MongoDB /mySQL",
-      "REST & GraphQL APIs",
       "CI/CD & cloud deploys (Vercel, AWS)",
     ],
   },
@@ -74,7 +73,6 @@ export const skills: { discipline: Discipline; items: string[] }[] = [
     discipline: "data",
     items: [
       "SQL & data modeling",
-      "Python (Pandas, NumPy)",
       "Excel/Tableau",
       "Dashboarding & reporting",
     ],
@@ -82,8 +80,9 @@ export const skills: { discipline: Discipline; items: string[] }[] = [
   {
     discipline: "design",
     items: [
-      "Figma (UI/UX & prototyping)",
-      "Adobe Photoshop & Illustrator",
+      "Canva",
+      "Adobe Photoshop",
+      "Illustrator",
       "Brand & identity systems",
       
     ],
@@ -102,51 +101,43 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    title: "Support-ticket triage automation",
+    title: "Automated Online Examination & Results System",
     discipline: "ai",
     summary:
-      "A Zapier + GPT pipeline that reads incoming support emails, classifies urgency, drafts a first response, and routes edge cases to a human — placeholder metric: cut first-response time by 65%.",
-    tags: ["Zapier", "OpenAI API", "Webhooks"],
-    href: "#",
+      "Built a Zapier-powered automation workflow that processes online examination submissions, captures and organizes students’ scores, and automatically sends personalized final results to each student’s email—reducing manual grading and result distribution.",
+    tags: ["Zapier", "Webhooks" ,"Workflow Automation", "Forms", "Education Technology" ,"Email Automation",  "Data Processing" ],
+    href: "https://zapier.com/editor/377059170/draft/377059171/fields",
     size: "lg",
   },
   {
     title: " Automatic Name Frame system ",
     discipline: "dev",
     summary:
-      "A full-stack Next.js + Postgres app for managing subscriptions, invoices, and usage-based billing, with a Paystack integration end to end.",
+      "An elegant full-stack Next.js + Postgres web application for managing subscriptions, invoices, and usage-based billing, with a Paystack integration end to end that generates personalized Islamic name frames featuring Arabic names, meanings, and culturally inspired designs.",
     tags: ["Next.js", "PostgreSQL", "Paystack"],
-    href: "#",
+    href: "https://github.com/caliphridwan/CRFRAMES",
     repo: "#",
     size: "md",
   },
   {
-    title: "Retail sales performance dashboard",
+    title: "Product Sales Categorization & Analysis Dashbaord",
     discipline: "data",
     summary:
-      "Analyzed retail sales data to identify sales trends, top-performing products, customer patterns, and revenue opportunities, transforming raw data into actionable business insights.",
+      "Analyzed and visualized product data in Tableau, categorizing items such as tea, coffee, and chocolate to uncover sales patterns, product performance, and actionable business insights.",
     tags: ["Excel", "SQL", "Tableau"],
-    href: "#",
-    size: "md",
+    href: "https://public.tableau.com/app/profile/ridwan.olatunde/viz/Book1_17846334237580/Dashboard1?publish=yes",
+    size: "sm",
   },
   {
-    title: "Fintech brand identity",
+    title: "Islamic Name Frame Design",
     discipline: "design",
     summary:
-      "Full visual identity — logo system, color, typography, and a component-based design system handed off to the dev team as production-ready Figma tokens.",
-    tags: ["Figma", "Brand system", "Design tokens"],
-    href: "#",
+      "Designed elegant personalized Islamic name frames in Canva, combining Arabic typography, meaningful translations, and refined Islamic aesthetics for digital and social media use.",
+    tags: ["Canva", "Brand system", "Design tokens"],
+    href: "https://canva.link/0q3501lxp71zbje",
     size: "sm",
   },
-  {
-    title: "Lead-enrichment agent",
-    discipline: "ai",
-    summary:
-      "An autonomous agent that researches inbound leads across the web and CRM, then scores and enriches each record before it reaches sales.",
-    tags: ["LangChain", "Python", "CRM API"],
-    href: "#",
-    size: "sm",
-  },
+  
   {
     title: "Traditional Caps E-Commerce Platform",
     discipline: "dev",
