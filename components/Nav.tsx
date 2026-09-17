@@ -1,6 +1,7 @@
 "use client";
 
 import { profile } from "@/content";
+import ThemeToggle from "@/components/ThemeToggle";
 
 const links = [
   { href: "#work", label: "Work" },
@@ -18,7 +19,7 @@ export default function Nav() {
           href="#top"
           className="font-display text-lg font-semibold tracking-tight text-paper"
         >
-          Caliph Ridwan
+          Caliph Ridwan.
           <span className="text-dev">.</span>
         </a>
         <ul className="hidden gap-8 font-body text-sm text-muted md:flex">
@@ -33,12 +34,15 @@ export default function Nav() {
             </li>
           ))}
         </ul>
-        <a
-          href={profile.resumeUrl}
-          className="rounded-none border-2 border-paper px-4 py-1.5 font-body text-sm text-paper transition-colors hover:bg-paper hover:text-ink"
-        >
-          Résumé
-        </a>
+        <div className="flex items-center gap-3">
+          <ThemeToggle />
+          <a
+            href={profile.resumeUrl}
+            className="rounded-none border-2 border-paper px-4 py-1.5 font-body text-sm text-paper transition-colors hover:bg-paper hover:text-ink"
+          >
+            Résumé
+          </a>
+        </div>
       </nav>
     </header>
   );

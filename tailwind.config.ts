@@ -5,21 +5,26 @@ const config: Config = {
     "./app/**/*.{ts,tsx}",
     "./components/**/*.{ts,tsx}",
   ],
+  darkMode: ["selector", '[data-theme="dark"]'],
   theme: {
     extend: {
       colors: {
-        ink: "#14141B",
-        "ink-soft": "#1B1B24",
-        paper: "#F2F1F7",
-        "paper-dim": "#E6E4EF",
-        muted: "#9A99A8",
-        mist: "#6B6A78",
-        // Discipline accents — used functionally to tag which
-        // discipline a skill/project belongs to, not as decoration.
-        ai: "#5B5BF6",
-        dev: "#D4FF3F",
-        data: "#FF3E7F",
-        design: "#FFA23E",
+        // Theme-aware tokens — values come from CSS variables set in
+        // globals.css, which flip based on [data-theme]. Using the
+        // rgb(var(...) / <alpha-value>) pattern keeps Tailwind's
+        // opacity modifiers (e.g. bg-ink/90) working normally.
+        ink: "rgb(var(--color-ink) / <alpha-value>)",
+        "ink-soft": "rgb(var(--color-ink-soft) / <alpha-value>)",
+        paper: "rgb(var(--color-paper) / <alpha-value>)",
+        "paper-dim": "rgb(var(--color-paper-dim) / <alpha-value>)",
+        muted: "rgb(var(--color-muted) / <alpha-value>)",
+        mist: "rgb(var(--color-mist) / <alpha-value>)",
+        // Discipline accents — also theme-aware now, so text/borders
+        // in these colors stay legible whichever theme is active.
+        ai: "rgb(var(--color-ai) / <alpha-value>)",
+        dev: "rgb(var(--color-dev) / <alpha-value>)",
+        data: "rgb(var(--color-data) / <alpha-value>)",
+        design: "rgb(var(--color-design) / <alpha-value>)",
       },
       fontFamily: {
         display: ["var(--font-fraunces)", "serif"],

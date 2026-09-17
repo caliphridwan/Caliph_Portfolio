@@ -30,6 +30,19 @@ export const metadata: Metadata = {
   },
 };
 
+// Runs before React hydrates so the page never flashes the wrong
+// theme on load. Reads the saved preference (falls back to dark,
+// this site's default) and sets it on <html> synchronously.
+const themeInitScript = `
+(function() {
+  try {
+    var stored = localStorage.getItem('theme');
+    var theme = stored === 'light' || stored === 'dark' ? stored : 'dark';
+    document.documentElement.setAttribute('data-theme', theme);
+  } catch (e) {}
+})();
+`;
+
 export default function RootLayout({
   children,
 }: {
@@ -37,6 +50,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${fraunces.variable} ${spaceGrotesk.variable}`}>
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
+      </head>
       <body className="font-body antialiased">{children}</body>
     </html>
   );

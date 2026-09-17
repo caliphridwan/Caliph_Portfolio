@@ -2,6 +2,46 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ── Theme tokens ──────────────────────────────────────────────
+   ink/paper (and their derivatives) are semantic, not literal —
+   dark theme keeps ink dark + paper light (today's design);
+   light theme swaps the pair so the same alternating-contrast
+   sections read light overall.
+
+   The four discipline accents (ai/dev/data/design) are also
+   theme-aware: full brightness in dark mode, deepened/more
+   saturated in light mode so text and borders in that color
+   stay readable against light backgrounds (bright citrus/amber
+   on white is close to invisible otherwise). Same hue family,
+   just tuned per theme. */
+:root {
+  --color-ink: 20 20 27;
+  --color-ink-soft: 27 27 36;
+  --color-paper: 242 241 247;
+  --color-paper-dim: 230 228 239;
+  --color-muted: 154 153 168;
+  --color-mist: 107 106 120;
+
+  --color-ai: 91 91 246;      /* #5B5BF6 */
+  --color-dev: 212 255 63;    /* #D4FF3F */
+  --color-data: 255 62 127;   /* #FF3E7F */
+  --color-design: 255 162 62; /* #FFA23E */
+}
+
+[data-theme="light"] {
+  --color-ink: 242 241 247;
+  --color-ink-soft: 230 228 239;
+  --color-paper: 20 20 27;
+  --color-paper-dim: 27 27 36;
+  --color-muted: 107 106 120;
+  --color-mist: 154 153 168;
+
+  --color-ai: 67 58 210;      /* deeper indigo, #433AD2 */
+  --color-dev: 122 135 10;    /* olive, #7A870A — was near-invisible citrus */
+  --color-data: 199 20 97;    /* deep magenta, #C71461 */
+  --color-design: 179 89 8;   /* burnt amber, #B35908 */
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -21,13 +61,14 @@ html {
 }
 
 body {
-  background-color: #14141B;
-  color: #F2F1F7;
+  background-color: rgb(var(--color-ink));
+  color: rgb(var(--color-paper));
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 ::selection {
-  background-color: #5B5BF6;
-  color: #14141B;
+  background-color: rgb(var(--color-ai));
+  color: rgb(var(--color-ink));
 }
 
 /* Visible keyboard focus ring across the site */
@@ -35,7 +76,7 @@ a:focus-visible,
 button:focus-visible,
 input:focus-visible,
 textarea:focus-visible {
-  outline: 2px solid #D4FF3F;
+  outline: 2px solid rgb(var(--color-dev));
   outline-offset: 3px;
   border-radius: 2px;
 }
@@ -45,9 +86,9 @@ textarea:focus-visible {
   width: 10px;
 }
 ::-webkit-scrollbar-track {
-  background: #14141B;
+  background: rgb(var(--color-ink));
 }
 ::-webkit-scrollbar-thumb {
-  background: #3a3a46;
+  background: rgb(var(--color-mist));
   border-radius: 0;
 }
