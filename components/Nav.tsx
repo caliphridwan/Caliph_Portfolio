@@ -19,7 +19,7 @@ export default function Nav() {
           href="#top"
           className="font-display text-lg font-semibold tracking-tight text-paper"
         >
-          Caliph Ridwan.
+          Caliph Ridwan
           <span className="text-dev">.</span>
         </a>
         <ul className="hidden gap-8 font-body text-sm text-muted md:flex">
