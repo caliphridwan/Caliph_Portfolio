@@ -46,7 +46,6 @@ export const about = {
   stats: [
     { value: "4+", label: " Core Disciplines" },
     { value: "20+", label: "Projects shipped" },
-    
   ],
 };
 
@@ -84,7 +83,6 @@ export const skills: { discipline: Discipline; items: string[] }[] = [
       "Adobe Photoshop",
       "Illustrator",
       "Brand & identity systems",
-      
     ],
   },
 ];
@@ -97,6 +95,10 @@ export type Project = {
   href?: string;
   repo?: string;
   size: "lg" | "md" | "sm";
+  // Optional: path or URL to a real screenshot/preview of the project
+  // (e.g. "/projects/exam-system.png" after adding the file to /public).
+  // When omitted, the card shows a themed illustration instead.
+  image?: string;
 };
 
 export const projects: Project[] = [
@@ -105,8 +107,9 @@ export const projects: Project[] = [
     discipline: "ai",
     summary:
       "Built a Zapier-powered automation workflow that processes online examination submissions, captures and organizes students’ scores, and automatically sends personalized final results to each student’s email—reducing manual grading and result distribution.",
-    tags: ["Zapier", "Webhooks" ,"Workflow Automation", "Forms", "Education Technology" ,"Email Automation",  "Data Processing" ],
+    tags: ["Zapier", "Webhooks", "Workflow Automation", "Forms", "Education Technology", "Email Automation", "Data Processing"],
     href: "https://zapier.com/editor/377059170/draft/377059171/fields",
+    image: "/projects/automation.png",
     size: "lg",
   },
   {
@@ -116,6 +119,7 @@ export const projects: Project[] = [
       "An elegant full-stack web application that generates personalized Islamic name frames featuring Arabic names, meanings, and culturally inspired designs.",
     tags: ["Next.js", "PostgreSQL", "Typescript", "Paystack"],
     href: "https://github.com/caliphridwan/CRFRAMES",
+    image: "/projects/nameimg.jpeg",
     repo: "#",
     size: "md",
   },
@@ -125,6 +129,7 @@ export const projects: Project[] = [
     summary:
       "Analyzed and visualized product data in Tableau, categorizing items such as tea, coffee, and chocolate to uncover sales patterns, product performance, and actionable business insights.",
     tags: ["Excel", "SQL", "Tableau"],
+    image: "/projects/analysis.jpg",
     href: "https://public.tableau.com/app/profile/ridwan.olatunde/viz/Book1_17846334237580/Dashboard1?publish=yes",
     size: "sm",
   },
@@ -135,15 +140,16 @@ export const projects: Project[] = [
       "Designed elegant personalized Islamic name frames in Canva, combining Arabic typography, meaningful translations, and refined Islamic aesthetics for digital and social media use.",
     tags: ["Canva", "Brand system", "Design tokens"],
     href: "https://canva.link/0q3501lxp71zbje",
+    image: "/projects/frame.jpg",
     size: "sm",
   },
-  
   {
     title: "Traditional Caps E-Commerce Platform",
     discipline: "dev",
     summary:
       "A modern e-commerce platform designed to showcase and sell premium traditional Nigerian caps, including Zanna, Tangaran, Atiku, Bindo, and other culturally inspired headwear.",
     tags: ["React", "Node.js", "NextJs"],
+    image: "/projects/cap.jpg",
     href: "#",
     size: "sm",
   },
@@ -188,8 +194,7 @@ export const experience: ExperienceItem[] = [
     org: "Self Employed",
     discipline: "design",
     description:
-      "Created visual materials and digital designs that communicate ideas effectively and strengthen brand identity using Adobe Photoshop, Canva, & Adobe Illustrator."
-
+      "Created visual materials and digital designs that communicate ideas effectively and strengthen brand identity using Adobe Photoshop, Canva, & Adobe Illustrator.",
   },
   {
     period: "Education",
