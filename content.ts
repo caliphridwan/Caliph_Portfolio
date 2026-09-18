@@ -129,7 +129,7 @@ export const projects: Project[] = [
     summary:
       "Analyzed and visualized product data in Tableau, categorizing items such as tea, coffee, and chocolate to uncover sales patterns, product performance, and actionable business insights.",
     tags: ["Excel", "SQL", "Tableau"],
-    image: "/projects/analysis.jpg",
+    image: "/projects/analysis.jpeg",
     href: "https://public.tableau.com/app/profile/ridwan.olatunde/viz/Book1_17846334237580/Dashboard1?publish=yes",
     size: "sm",
   },
@@ -140,7 +140,7 @@ export const projects: Project[] = [
       "Designed elegant personalized Islamic name frames in Canva, combining Arabic typography, meaningful translations, and refined Islamic aesthetics for digital and social media use.",
     tags: ["Canva", "Brand system", "Design tokens"],
     href: "https://canva.link/0q3501lxp71zbje",
-    image: "/projects/frame.jpg",
+    image: "/projects/frame.jpeg",
     size: "sm",
   },
   {
@@ -149,7 +149,7 @@ export const projects: Project[] = [
     summary:
       "A modern e-commerce platform designed to showcase and sell premium traditional Nigerian caps, including Zanna, Tangaran, Atiku, Bindo, and other culturally inspired headwear.",
     tags: ["React", "Node.js", "NextJs"],
-    image: "/projects/cap.jpg",
+    image: "/projects/caps.jpeg",
     href: "#",
     size: "sm",
   },
