@@ -165,11 +165,7 @@ export default function Projects() {
         </div>
 
         <p className="mt-8 font-body text-sm text-muted">
-          These thumbnails are themed placeholders. Add a real screenshot for
-          any project by setting its <code>image</code> field in{" "}
-          <code>content.ts</code> to a file in <code>/public</code> (or a
-          hosted URL) — e.g. a screenshot of your Tableau dashboard, your
-          Canva design export, or your deployed CR Frames app.
+          
         </p>
       </div>
     </section>
