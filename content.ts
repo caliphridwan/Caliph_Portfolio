@@ -102,6 +102,18 @@ export type Project = {
 };
 
 export const projects: Project[] = [
+
+  {
+    title: "AlFawz Academy — Online Islamic Education Platform",
+    discipline: "dev",
+    summary:
+      "A full-stack platform for structured online Qur'an and Islamic education for children, youth and adults worldwide, with a course catalogue, student registration and login, programmes, sponsorship, events, testimonials and an alumni section.",
+    tags: ["Next.js", "Prisma", "PostgreSQL", "Render"],
+    href: "https://alfawzacademy.com",
+    repo: "https://github.com/caliphridwan/ALFAWZ_ACADEMY",
+    image: "https://alfawzacademy.com/images/og-default.jpg",
+    size: "lg",
+  },
   {
     title: "Automated Online Examination & Results System",
     discipline: "ai",
@@ -119,9 +131,19 @@ export const projects: Project[] = [
       "An elegant full-stack web application that generates personalized Islamic name frames featuring Arabic names, meanings, and culturally inspired designs.",
     tags: ["Next.js", "PostgreSQL", "Typescript", "Paystack"],
     href: "https://github.com/caliphridwan/CRFRAMES",
-    image: "/projects/nameimg.jpeg",
+    image: "/projects/alfawz.png",
     repo: "#",
     size: "md",
+  },
+  {
+    title: "Faculty of Computing Result Portal, BUK",
+    discipline: "dev",
+    summary:
+      "An online result-checking portal for the Faculty of Computing at Bayero University Kano, so students can view their results securely online. Currently in development and being proposed to the Faculty.",
+    tags: ["Next.js", "Prisma", "PostgreSQL"],
+    image: "/projects/buk.png",
+    repo: "#",
+    size: "sm",
   },
   {
     title: "Product Sales Categorization & Analysis",
