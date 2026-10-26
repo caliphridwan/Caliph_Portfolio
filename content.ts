@@ -111,7 +111,7 @@ export const projects: Project[] = [
     tags: ["Next.js", "Prisma", "PostgreSQL", "Render"],
     href: "https://alfawzacademy.com",
     repo: "https://github.com/caliphridwan/ALFAWZ_ACADEMY",
-    image: "https://alfawzacademy.com/images/og-default.jpg",
+    image: "/projects/alfawz.png",
     size: "lg",
   },
   {
@@ -122,7 +122,7 @@ export const projects: Project[] = [
     tags: ["Zapier", "Webhooks", "Workflow Automation", "Forms", "Education Technology", "Email Automation", "Data Processing"],
     href: "https://zapier.com/editor/377059170/draft/377059171/fields",
     image: "/projects/automation.png",
-    size: "lg",
+    size: "md",
   },
   {
     title: " Automatic Name Frame system ",
@@ -131,9 +131,9 @@ export const projects: Project[] = [
       "An elegant full-stack web application that generates personalized Islamic name frames featuring Arabic names, meanings, and culturally inspired designs.",
     tags: ["Next.js", "PostgreSQL", "Typescript", "Paystack"],
     href: "https://github.com/caliphridwan/CRFRAMES",
-    image: "/projects/alfawz.png",
+    image: "/projects/nameimg.jpeg",
     repo: "#",
-    size: "md",
+    size: "sm",
   },
   {
     title: "Faculty of Computing Result Portal, BUK",
@@ -142,7 +142,6 @@ export const projects: Project[] = [
       "An online result-checking portal for the Faculty of Computing at Bayero University Kano, so students can view their results securely online. Currently in development and being proposed to the Faculty.",
     tags: ["Next.js", "Prisma", "PostgreSQL"],
     image: "/projects/buk.png",
-    repo: "#",
     size: "sm",
   },
   {
@@ -172,7 +171,7 @@ export const projects: Project[] = [
       "A modern e-commerce platform designed to showcase and sell premium traditional Nigerian caps, including Zanna, Tangaran, Atiku, Bindo, and other culturally inspired headwear.",
     tags: ["React", "Node.js", "NextJs"],
     image: "/projects/caps.jpeg",
-    href: "#",
+    href: "https://fila-house.onrender.com",
     size: "sm",
   },
 ];
