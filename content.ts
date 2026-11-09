@@ -139,7 +139,7 @@ export const projects: Project[] = [
     summary:
       "A premium car dealership website with an admin platform: vehicle inventory, customer enquiries, test-drive booking with conflict checks, financing and trade-in requests, sales-rep assignment, notifications and activity logs.",
     tags: ["Next.js", "TypeScript", "Prisma", "PostgreSQL", "NextAuth", "Cloudinary"],
-    href: "https://github.com/caliphridwan/balingerautos",
+    href: "https://balingerautos.onrender.com",
     image: "https://images.unsplash.com/photo-1767907571229-01cf4ba03590?auto=format&fit=crop&w=1600&h=900&q=80",
     size: "sm",
   },
@@ -159,7 +159,7 @@ export const projects: Project[] = [
     summary:
       "A redesign of the Favent Magna Nigeria Limited website where services, partners, projects, page headings and contact details live in the database and can be edited from an admin dashboard without code.",
     tags: ["Next.js 15", "TypeScript", "Prisma", "PostgreSQL", "Cloudinary", "Resend"],
-    href: "https://github.com/caliphridwan/favent_magna",
+    href: "https://favent-magna.onrender.com",
     image: "https://images.unsplash.com/photo-1564457461758-8ff96e439e83?auto=format&fit=crop&w=1600&h=900&q=80",
     size: "sm",
   },
