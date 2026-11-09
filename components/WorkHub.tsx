@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { disciplines, projects, type Discipline, type Project } from "@/content";
 import { ArrowUpRight, Chevron } from "./icons";
+import Reveal from "./Reveal";
 
 type Filter = Discipline | "all";
 
@@ -30,7 +31,7 @@ const dot: Record<Discipline, string> = {
 
 const link = (p: Project) => p.href ?? p.repo;
 
-function CaseStudy({ project, wide }: { project: Project; wide: boolean }) {
+function CaseStudy({ project, wide, delay }: { project: Project; wide: boolean; delay: number }) {
   const url = link(project);
   const body = (
     <>
@@ -64,15 +65,18 @@ function CaseStudy({ project, wide }: { project: Project; wide: boolean }) {
       </div>
     </>
   );
-  const cls = `group block overflow-hidden rounded-3xl border border-subtle/25 bg-surface transition-colors hover:border-ink/60 ${
-    wide ? "md:col-span-2" : ""
-  }`;
-  return url ? (
-    <a href={url} target="_blank" rel="noopener noreferrer" className={cls}>
-      {body}
-    </a>
-  ) : (
-    <div className={cls}>{body}</div>
+  const cls =
+    "group block overflow-hidden rounded-3xl border border-subtle/25 bg-surface transition-all duration-300 hover:-translate-y-1 hover:border-ink/60 hover:shadow-xl hover:shadow-black/10";
+  return (
+    <Reveal className={wide ? "md:col-span-2" : ""} delay={delay}>
+      {url ? (
+        <a href={url} target="_blank" rel="noopener noreferrer" className={`${cls} h-full`}>
+          {body}
+        </a>
+      ) : (
+        <div className={`${cls} h-full`}>{body}</div>
+      )}
+    </Reveal>
   );
 }
 
@@ -87,7 +91,7 @@ function IndexRow({ project, open, onToggle }: { project: Project; open: boolean
           onClick={onToggle}
           aria-expanded={open}
           aria-controls={`panel-${id}`}
-          className="flex w-full items-center gap-4 py-5 text-left"
+          className="group flex w-full items-center gap-4 py-5 text-left transition-[padding] duration-300 hover:pl-2"
         >
           <span className={`h-3 w-3 shrink-0 rounded-full ${dot[project.discipline]}`} />
           <span className="flex-1 font-display text-xl font-semibold leading-snug">{project.title}</span>
@@ -96,7 +100,7 @@ function IndexRow({ project, open, onToggle }: { project: Project; open: boolean
         </button>
       </h3>
       {open && (
-        <div id={`panel-${id}`} className="pb-6 pl-7">
+        <div id={`panel-${id}`} className="pb-6 pl-7 enter">
           <p className="max-w-2xl text-base leading-relaxed text-subtle">{project.summary}</p>
           <ul className="mt-4 flex flex-wrap gap-2">
             {project.tags.map((t) => (
@@ -133,7 +137,7 @@ export default function WorkHub() {
     <section id="work" className="border-y border-subtle/20 bg-surface/50">
       <div className="mx-auto max-w-6xl px-5 py-20 sm:px-8">
         <div className="flex flex-wrap items-end justify-between gap-6">
-          <h2 className="font-display text-4xl font-bold leading-[1.05] sm:text-5xl lg:text-6xl">Selected work</h2>
+          <Reveal><h2 className="font-display text-4xl font-bold leading-[1.05] sm:text-5xl lg:text-6xl">Selected work</h2></Reveal>
           <div role="group" aria-label="Filter projects" className="flex flex-wrap gap-2">
             {filters.map((f) => (
               <button
@@ -159,7 +163,7 @@ export default function WorkHub() {
         {featured.length > 0 && (
           <div className="mt-12 grid gap-5 md:grid-cols-2">
             {featured.map((p, i) => (
-              <CaseStudy key={p.title} project={p} wide={i === 0 && featured.length % 2 === 1} />
+              <CaseStudy key={p.title} project={p} wide={i === 0 && featured.length % 2 === 1} delay={(i % 2) * 120} />
             ))}
           </div>
         )}

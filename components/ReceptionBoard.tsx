@@ -6,14 +6,14 @@ import { computeBoard, type Board, type Run } from "@/lib/overlap";
 
 const pct = (n: number) => `${(n / 96) * 100}%`;
 
-function Bars({ runs, className }: { runs: Run[]; className: string }) {
+function Bars({ runs, className, delay }: { runs: Run[]; className: string; delay?: number }) {
   return (
     <>
       {runs.map((r, i) => (
         <span
           key={i}
           className={`absolute inset-y-0 ${className}`}
-          style={{ left: pct(r.start), width: pct(r.len) }}
+          style={{ left: pct(r.start), width: pct(r.len), animationDelay: delay ? `${delay}ms` : undefined }}
         />
       ))}
     </>
@@ -64,7 +64,7 @@ export default function ReceptionBoard() {
 
       <ul className="mt-6 space-y-3">
         {(board?.rows ?? hq.partners.map((p) => ({ label: p.label, time: "--:--", overlapHours: 0, theirRuns: [], overlapRuns: [] }))).map(
-          (row) => (
+          (row, idx) => (
             <li key={row.label} className="grid grid-cols-[5.5rem_1fr_3.5rem] items-center gap-3 sm:grid-cols-[7rem_1fr_4rem]">
               <div>
                 <p className="text-sm font-semibold leading-tight">{row.label}</p>
@@ -76,7 +76,7 @@ export default function ReceptionBoard() {
                 aria-label={`${row.label}: ${row.overlapHours} hours of overlap`}
               >
                 <Bars runs={row.theirRuns} className="bg-subtle/30" />
-                <Bars runs={row.overlapRuns} className="board-grow bg-block-dev" />
+                <Bars runs={row.overlapRuns} className="board-grow bg-block-dev" delay={900 + idx * 120} />
                 {board && (
                   <span
                     className="absolute inset-y-0 w-0.5 bg-ink"

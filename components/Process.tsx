@@ -1,4 +1,5 @@
 import { process } from "@/content";
+import Reveal from "./Reveal";
 
 export default function Process() {
   return (
@@ -8,13 +9,13 @@ export default function Process() {
       </h2>
       <ol className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
         {process.map((step, i) => (
-          <li key={step.title} className="rounded-3xl border border-subtle/25 bg-surface p-7">
+          <Reveal as="li" key={step.title} delay={i * 110} className="rounded-3xl border border-subtle/25 bg-surface p-7 transition-colors hover:border-ink/50">
             <span className="flex h-9 w-9 items-center justify-center rounded-full bg-ink font-semibold text-canvas">
               {i + 1}
             </span>
             <h3 className="mt-5 font-display text-2xl font-semibold">{step.title}</h3>
             <p className="mt-2 text-base leading-relaxed text-subtle">{step.text}</p>
-          </li>
+          </Reveal>
         ))}
       </ol>
     </section>

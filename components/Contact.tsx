@@ -3,11 +3,12 @@
 import { useState } from "react";
 import { profile, ways } from "@/content";
 import { Mark } from "./icons";
+import Reveal from "./Reveal";
 
 type Status = "idle" | "sending" | "sent" | "error";
 
 const field =
-  "mt-1.5 w-full rounded-xl border border-white/30 bg-white/10 px-4 py-3 text-white placeholder:text-white/50 focus:border-block-dev focus:outline-none";
+  "mt-1.5 w-full rounded-xl border border-white/30 bg-white/10 px-4 py-3 text-white placeholder:text-white/50 transition-all duration-300 focus:-translate-y-0.5 focus:border-block-dev focus:bg-white/15 focus:outline-none";
 
 export default function Contact() {
   const [name, setName] = useState("");
@@ -80,6 +81,7 @@ export default function Contact() {
             </ul>
           </div>
 
+          <Reveal delay={150}>
           <form onSubmit={send} className="space-y-5 rounded-3xl bg-black/20 p-6 sm:p-8">
             <div>
               <label htmlFor="name" className="text-sm font-semibold">
@@ -119,6 +121,7 @@ export default function Contact() {
               )}
             </div>
           </form>
+          </Reveal>
         </div>
 
         <div className="mt-16 flex flex-col items-start justify-between gap-3 border-t border-white/25 pt-6 text-sm text-white/80 sm:flex-row sm:items-center">

@@ -1,4 +1,6 @@
 import { about, disciplines, experience } from "@/content";
+import CountUp from "./CountUp";
+import Reveal from "./Reveal";
 
 const accent = {
   ai: "text-ai",
@@ -23,7 +25,7 @@ export default function Story() {
           <dl className="mt-8 flex gap-10">
             {about.stats.map((s) => (
               <div key={s.label}>
-                <dd className="font-display text-4xl font-semibold">{s.value}</dd>
+                <dd className="font-display text-5xl font-bold"><CountUp value={s.value} /></dd>
                 <dt className="text-sm text-subtle">{s.label.trim()}</dt>
               </div>
             ))}
@@ -32,7 +34,7 @@ export default function Story() {
 
         <ol className="border-t border-subtle/25">
           {experience.map((e) => (
-            <li key={e.role} className="grid gap-1 border-b border-subtle/25 py-6 sm:grid-cols-[9rem_1fr] sm:gap-6">
+            <Reveal as="li" key={e.role} className="grid gap-1 border-b border-subtle/25 py-6 sm:grid-cols-[9rem_1fr] sm:gap-6">
               <p className="text-sm text-subtle">{e.period}</p>
               <div>
                 <h3 className="font-display text-xl font-semibold leading-snug">{e.role}</h3>
@@ -41,7 +43,7 @@ export default function Story() {
                 </p>
                 <p className="mt-3 text-base leading-relaxed text-subtle">{e.description.trim()}</p>
               </div>
-            </li>
+            </Reveal>
           ))}
         </ol>
       </div>

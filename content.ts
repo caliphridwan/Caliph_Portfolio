@@ -377,3 +377,19 @@ export const ways = [
     text: "Connect forms, spreadsheets, email and payments so routine work runs itself.",
   },
 ];
+
+// Tools shown in the scrolling strip under the hero.
+export const stack = [
+  "Next.js",
+  "TypeScript",
+  "Node.js",
+  "PostgreSQL",
+  "Prisma",
+  "Zapier",
+  "Make",
+  "OpenAI API",
+  "SQL",
+  "Tableau",
+  "Photoshop",
+  "Illustrator",
+];
