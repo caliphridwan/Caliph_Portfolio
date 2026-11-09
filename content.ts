@@ -95,6 +95,8 @@ export type Project = {
   href?: string;
   repo?: string;
   size: "lg" | "md" | "sm";
+  // Featured projects show first; the rest appear under "See more".
+  featured?: boolean;
   // Optional: path or URL to a real screenshot/preview of the project
   // (e.g. "/projects/exam-system.png" after adding the file to /public).
   // When omitted, the card shows a themed illustration instead.
@@ -105,6 +107,7 @@ export const projects: Project[] = [
   {
     title: "AlFawz Academy — Online Islamic Education Platform",
     discipline: "dev",
+    featured: true,
     summary:
       "A full-stack platform for structured online Qur'an and Islamic education for children, youth and adults worldwide, with a course catalogue, student registration and login, programmes, sponsorship, events, testimonials and an alumni section.",
     tags: ["Next.js", "Prisma", "PostgreSQL", "Render"],
@@ -116,6 +119,7 @@ export const projects: Project[] = [
   {
     title: "Automated Online Examination & Results System",
     discipline: "ai",
+    featured: true,
     summary:
       "Built a Zapier-powered automation workflow that processes online examination submissions, captures and organizes students’ scores, and automatically sends personalized final results to each student’s email—reducing manual grading and result distribution.",
     tags: ["Zapier", "Webhooks", "Workflow Automation", "Forms", "Education Technology", "Email Automation", "Data Processing"],
@@ -136,6 +140,7 @@ export const projects: Project[] = [
   {
     title: "Balinger Autos — Dealership Platform",
     discipline: "dev",
+    featured: true,
     summary:
       "A premium car dealership website with an admin platform: vehicle inventory, customer enquiries, test-drive booking with conflict checks, financing and trade-in requests, sales-rep assignment, notifications and activity logs.",
     tags: ["Next.js", "TypeScript", "Prisma", "PostgreSQL", "NextAuth", "Cloudinary"],
@@ -227,6 +232,7 @@ export const projects: Project[] = [
   {
     title: "Product Sales Categorization & Analysis",
     discipline: "data",
+    featured: true,
     summary:
       "Analyzed and visualized product data in Tableau, categorizing items such as tea, coffee, and chocolate to uncover sales patterns, product performance, and actionable business insights.",
     tags: ["Excel", "SQL", "Tableau"],
@@ -237,6 +243,7 @@ export const projects: Project[] = [
   {
     title: "Islamic Name Frame Design",
     discipline: "design",
+    featured: true,
     summary:
       "Designed elegant personalized Islamic name frames in Canva, combining Arabic typography, meaningful translations, and refined Islamic aesthetics for digital and social media use.",
     tags: ["Canva", "Brand system", "Design tokens"],

@@ -100,9 +100,16 @@ const filters: { key: Discipline | "all"; label: string }[] = [
 
 export default function Projects() {
   const [active, setActive] = useState<Discipline | "all">("all");
+  const [expanded, setExpanded] = useState(false);
 
-  const visible =
+  const filtered =
     active === "all" ? projects : projects.filter((p) => p.discipline === active);
+
+  // "All work" shows only the featured projects until "See more" is pressed.
+  // Picking a single discipline always lists everything in it.
+  const showAll = active !== "all" || expanded;
+  const visible = showAll ? filtered : filtered.filter((p) => p.featured);
+  const hiddenCount = projects.filter((p) => !p.featured).length;
 
   return (
     <section id="work" className="bg-ink text-paper">
@@ -163,6 +170,18 @@ export default function Projects() {
             </a>
           ))}
         </div>
+
+        {active === "all" && hiddenCount > 0 && (
+          <div className="mt-10 flex justify-center">
+            <button
+              onClick={() => setExpanded((e) => !e)}
+              aria-expanded={expanded}
+              className="border-2 border-paper px-8 py-3 font-body text-sm font-medium text-paper transition-colors hover:bg-paper hover:text-ink"
+            >
+              {expanded ? "Show fewer projects" : `See more projects (${hiddenCount})`}
+            </button>
+          </div>
+        )}
 
         <p className="mt-8 font-body text-sm text-muted">
           
