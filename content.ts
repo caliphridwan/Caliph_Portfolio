@@ -140,7 +140,7 @@ export const projects: Project[] = [
       "A premium car dealership website with an admin platform: vehicle inventory, customer enquiries, test-drive booking with conflict checks, financing and trade-in requests, sales-rep assignment, notifications and activity logs.",
     tags: ["Next.js", "TypeScript", "Prisma", "PostgreSQL", "NextAuth", "Cloudinary"],
     href: "https://github.com/caliphridwan/balingerautos",
-    image: "/projects/balinger-autos.jpg",
+    image: "https://images.unsplash.com/photo-1767907571229-01cf4ba03590?auto=format&fit=crop&w=1600&h=900&q=80",
     size: "sm",
   },
   {
@@ -150,7 +150,7 @@ export const projects: Project[] = [
       "A property discovery and investor-engagement platform for a Lagos real estate firm: advanced search across buy, rent, lease and invest, lead capture forms, WhatsApp click-to-call, UTM lead attribution, and an admin CRM with a status pipeline, CSV export and monthly reports.",
     tags: ["Next.js", "TypeScript", "Prisma", "PostgreSQL", "Resend"],
     href: "https://github.com/caliphridwan/adamchellvan",
-    image: "/projects/adam-chellvan.jpg",
+    image: "https://images.unsplash.com/photo-1543414347-1c348021f279?auto=format&fit=crop&w=1600&h=900&q=80",
     size: "sm",
   },
   {
@@ -160,7 +160,7 @@ export const projects: Project[] = [
       "A redesign of the Favent Magna Nigeria Limited website where services, partners, projects, page headings and contact details live in the database and can be edited from an admin dashboard without code.",
     tags: ["Next.js 15", "TypeScript", "Prisma", "PostgreSQL", "Cloudinary", "Resend"],
     href: "https://github.com/caliphridwan/favent_magna",
-    image: "/projects/favent-magna.jpg",
+    image: "https://images.unsplash.com/photo-1564457461758-8ff96e439e83?auto=format&fit=crop&w=1600&h=900&q=80",
     size: "sm",
   },
   {
@@ -170,7 +170,7 @@ export const projects: Project[] = [
       "A website and admin system for a Hajj and travel company. Package details only appear publicly once staff mark them verified, prices change only with a reason and an audit trail, and booking requests never secure a place until staff confirm the agreed total.",
     tags: ["Next.js 15", "Prisma", "PostgreSQL", "Tailwind CSS 4", "Nodemailer"],
     href: "https://github.com/caliphridwan/Naa-ib-Hajj-Umrah",
-    image: "/projects/naaib-hajj.jpg",
+    image: "https://images.unsplash.com/photo-1693590614566-1d3ea9ef32f7?auto=format&fit=crop&w=1600&h=900&q=80",
     size: "sm",
   },
   {
@@ -180,7 +180,7 @@ export const projects: Project[] = [
       "A website and portal for an Arabic and Islamic institution: admissions, student registration with automatic matric numbers, Paystack fee payments with QR receipts, printable ID cards, congregation membership, donations and an admin dashboard.",
     tags: ["Next.js 15", "TypeScript", "Prisma", "PostgreSQL", "Paystack"],
     href: "https://github.com/caliphridwan/markaz-ul-igathah",
-    image: "/projects/markaz.jpg",
+    image: "https://images.unsplash.com/photo-1778754607542-89f546df4b16?auto=format&fit=crop&w=1600&h=900&q=80",
     size: "sm",
   },
   {
@@ -190,7 +190,7 @@ export const projects: Project[] = [
       "A Next.js rebuild of a scholar's official website, covering programmes, publications with downloadable documents, a blog, and contact pages, set up for Netlify deployment.",
     tags: ["Next.js 14", "TypeScript", "Tailwind CSS", "Netlify"],
     href: "https://github.com/caliphridwan/Imam_Idris",
-    image: "/projects/imam-idris.jpg",
+    image: "https://images.unsplash.com/photo-1770131748972-b1a08d57efbc?auto=format&fit=crop&w=1600&h=900&q=80",
     size: "sm",
   },
   {
@@ -200,7 +200,7 @@ export const projects: Project[] = [
       "A Next.js rebuild of a surgical clinic's website with a patient journey timeline, team profiles with a shared profile modal, patient stories, an FAQ accordion and an enquiry form. All content lives in one editable data file.",
     tags: ["Next.js 14", "React", "Content-driven"],
     href: "https://github.com/caliphridwan/SurgeonMut",
-    image: "/projects/csssc-clinic.jpg",
+    image: "https://images.unsplash.com/photo-1551601651-09492b5468b6?auto=format&fit=crop&w=1600&h=900&q=80",
     size: "sm",
   },
   {
