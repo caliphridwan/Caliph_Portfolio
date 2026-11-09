@@ -1,20 +1,18 @@
 import type { Metadata, Viewport } from "next";
-import { Fraunces, Space_Grotesk } from "next/font/google";
+import { Bricolage_Grotesque, Instrument_Sans } from "next/font/google";
 import { about, profile } from "@/content";
 import "./globals.css";
 
-const fraunces = Fraunces({
+// Variable fonts: every weight is available, so no weight list is needed.
+const display = Bricolage_Grotesque({
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-  style: ["normal", "italic"],
-  variable: "--font-fraunces",
+  variable: "--font-display",
   display: "swap",
 });
 
-const spaceGrotesk = Space_Grotesk({
+const body = Instrument_Sans({
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-  variable: "--font-space-grotesk",
+  variable: "--font-body",
   display: "swap",
 });
 
@@ -82,7 +80,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       lang="en"
       data-theme="dark"
       suppressHydrationWarning
-      className={`${fraunces.variable} ${spaceGrotesk.variable}`}
+      className={`${display.variable} ${body.variable}`}
     >
       <head>
         <script dangerouslySetInnerHTML={{ __html: themeInit }} />

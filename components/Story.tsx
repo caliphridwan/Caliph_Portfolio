@@ -12,7 +12,7 @@ export default function Story() {
     <section id="background" className="border-t border-subtle/20 bg-surface/50">
       <div className="mx-auto grid max-w-6xl gap-14 px-5 py-20 sm:px-8 lg:grid-cols-[0.8fr_1.2fr]">
         <div className="lg:sticky lg:top-28 lg:self-start">
-          <h2 className="font-display text-4xl font-semibold leading-tight sm:text-5xl">Background</h2>
+          <h2 className="font-display text-4xl font-bold leading-[1.05] sm:text-5xl lg:text-6xl">Background</h2>
           <div className="mt-6 space-y-4 text-lg leading-relaxed text-subtle">
             {about.paragraphs
               .filter((p) => p.trim().length > 0)

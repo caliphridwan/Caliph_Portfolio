@@ -56,7 +56,7 @@ function CaseStudy({ project, wide }: { project: Project; wide: boolean }) {
         <p className="mt-3 text-base leading-relaxed text-subtle">{project.summary}</p>
         <ul className="mt-5 flex flex-wrap gap-2">
           {project.tags.map((t) => (
-            <li key={t} className="rounded-full bg-subtle/15 px-3 py-1 text-xs">
+            <li key={t} className="rounded-full bg-subtle/15 px-3 py-1 text-sm">
               {t}
             </li>
           ))}
@@ -100,7 +100,7 @@ function IndexRow({ project, open, onToggle }: { project: Project; open: boolean
           <p className="max-w-2xl text-base leading-relaxed text-subtle">{project.summary}</p>
           <ul className="mt-4 flex flex-wrap gap-2">
             {project.tags.map((t) => (
-              <li key={t} className="rounded-full bg-subtle/15 px-3 py-1 text-xs">
+              <li key={t} className="rounded-full bg-subtle/15 px-3 py-1 text-sm">
                 {t}
               </li>
             ))}
@@ -133,7 +133,7 @@ export default function WorkHub() {
     <section id="work" className="border-y border-subtle/20 bg-surface/50">
       <div className="mx-auto max-w-6xl px-5 py-20 sm:px-8">
         <div className="flex flex-wrap items-end justify-between gap-6">
-          <h2 className="font-display text-4xl font-semibold leading-tight sm:text-5xl">Selected work</h2>
+          <h2 className="font-display text-4xl font-bold leading-[1.05] sm:text-5xl lg:text-6xl">Selected work</h2>
           <div role="group" aria-label="Filter projects" className="flex flex-wrap gap-2">
             {filters.map((f) => (
               <button

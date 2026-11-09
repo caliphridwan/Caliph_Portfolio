@@ -42,7 +42,7 @@ export default function Contact() {
       <div className="mx-auto max-w-6xl px-5 py-20 sm:px-8">
         <div className="grid gap-14 lg:grid-cols-2">
           <div>
-            <h2 className="font-display text-4xl font-semibold leading-tight sm:text-6xl">
+            <h2 className="font-display text-5xl font-bold leading-[1.02] sm:text-6xl lg:text-7xl">
               Tell me what you need built
             </h2>
             <p className="mt-5 max-w-md text-lg text-white/85">

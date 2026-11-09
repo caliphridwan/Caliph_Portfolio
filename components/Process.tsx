@@ -3,7 +3,7 @@ import { process } from "@/content";
 export default function Process() {
   return (
     <section id="process" className="mx-auto max-w-6xl px-5 py-20 sm:px-8">
-      <h2 className="max-w-2xl font-display text-4xl font-semibold leading-tight sm:text-5xl">
+      <h2 className="max-w-2xl font-display text-4xl font-bold leading-[1.05] sm:text-5xl lg:text-6xl">
         How a project runs
       </h2>
       <ol className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">

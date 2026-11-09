@@ -15,10 +15,10 @@ export default function Hero() {
             {hq.availability}
           </p>
 
-          <h1 className="mt-7 font-display text-5xl font-semibold leading-[1.02] tracking-tight sm:text-7xl">
+          <h1 className="mt-7 font-display text-[clamp(3rem,9vw,5.75rem)] font-bold leading-[0.98]">
             {profile.name}
           </h1>
-          <p className="mt-6 max-w-xl font-display text-2xl leading-snug text-ink sm:text-3xl">
+          <p className="mt-6 max-w-xl font-display text-2xl font-medium leading-snug text-ink sm:text-[1.75rem]">
             Full-stack developer, AI automation and data, working from {hq.city} for teams anywhere.
           </p>
           <p className="mt-5 max-w-xl text-lg text-subtle">{profile.tagline}</p>

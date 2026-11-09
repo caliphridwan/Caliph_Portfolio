@@ -36,9 +36,21 @@ html {
 body {
   background-color: rgb(var(--canvas));
   color: rgb(var(--ink));
-  font-size: 17px;
-  line-height: 1.6;
+  font-size: 18px;
+  line-height: 1.65;
+  font-feature-settings: "kern", "liga";
   transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+h1,
+h2,
+h3 {
+  letter-spacing: -0.025em;
+  text-wrap: balance;
+}
+
+p {
+  text-wrap: pretty;
 }
 
 ::selection {

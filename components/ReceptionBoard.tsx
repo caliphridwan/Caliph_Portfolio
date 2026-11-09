@@ -58,7 +58,7 @@ export default function ReceptionBoard() {
           <p className="font-display text-3xl font-semibold tabular-nums" aria-live="off">
             {board ? board.homeTime : "--:--"}
           </p>
-          <p className="text-xs text-subtle">{hq.city} now</p>
+          <p className="text-sm text-subtle">{hq.city} now</p>
         </div>
       </div>
 

@@ -13,7 +13,7 @@ const panel: Record<Discipline, string> = {
 export default function Departments() {
   return (
     <section id="departments" className="mx-auto max-w-6xl px-5 py-20 sm:px-8">
-      <h2 className="max-w-2xl font-display text-4xl font-semibold leading-tight sm:text-5xl">
+      <h2 className="max-w-2xl font-display text-4xl font-bold leading-[1.05] sm:text-5xl lg:text-6xl">
         Four departments, one person to talk to
       </h2>
       <p className="mt-4 max-w-xl text-lg text-subtle">
