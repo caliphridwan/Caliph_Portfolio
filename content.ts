@@ -102,7 +102,6 @@ export type Project = {
 };
 
 export const projects: Project[] = [
-
   {
     title: "AlFawz Academy — Online Islamic Education Platform",
     discipline: "dev",
@@ -125,23 +124,104 @@ export const projects: Project[] = [
     size: "md",
   },
   {
-    title: " Automatic Name Frame system ",
-    discipline: "dev",
-    summary:
-      "An elegant full-stack web application that generates personalized Islamic name frames featuring Arabic names, meanings, and culturally inspired designs.",
-    tags: ["Next.js", "PostgreSQL", "Typescript", "Paystack"],
-    href: "https://github.com/caliphridwan/CRFRAMES",
-    image: "/projects/nameimg.jpeg",
-    repo: "#",
-    size: "sm",
-  },
-  {
     title: "Faculty of Computing Result Portal, BUK",
     discipline: "dev",
     summary:
-      "An online result-checking portal for the Faculty of Computing at Bayero University Kano, so students can view their results securely online. Currently in development and being proposed to the Faculty.",
-    tags: ["Next.js", "Prisma", "PostgreSQL"],
+      "A pilot result management portal for the Faculty of Computing, Bayero University Kano. Lecturers upload scores, results move through department, HOD, Faculty Board and Senate approval, and students then see their published results, GPA and CGPA, with PDF and QR output.",
+    tags: ["Next.js", "TypeScript", "Prisma", "PostgreSQL", "Vitest"],
+    href: "https://github.com/caliphridwan/BUKRES",
     image: "/projects/buk.png",
+    size: "sm",
+  },
+  {
+    title: "Balinger Autos — Dealership Platform",
+    discipline: "dev",
+    summary:
+      "A premium car dealership website with an admin platform: vehicle inventory, customer enquiries, test-drive booking with conflict checks, financing and trade-in requests, sales-rep assignment, notifications and activity logs.",
+    tags: ["Next.js", "TypeScript", "Prisma", "PostgreSQL", "NextAuth", "Cloudinary"],
+    href: "https://github.com/caliphridwan/balingerautos",
+    image: "/projects/balinger-autos.jpg",
+    size: "sm",
+  },
+  {
+    title: "Adam Chellvan Properties — Property Platform",
+    discipline: "dev",
+    summary:
+      "A property discovery and investor-engagement platform for a Lagos real estate firm: advanced search across buy, rent, lease and invest, lead capture forms, WhatsApp click-to-call, UTM lead attribution, and an admin CRM with a status pipeline, CSV export and monthly reports.",
+    tags: ["Next.js", "TypeScript", "Prisma", "PostgreSQL", "Resend"],
+    href: "https://github.com/caliphridwan/adamchellvan",
+    image: "/projects/adam-chellvan.jpg",
+    size: "sm",
+  },
+  {
+    title: "Favent Magna — Corporate Website & Admin CMS",
+    discipline: "dev",
+    summary:
+      "A redesign of the Favent Magna Nigeria Limited website where services, partners, projects, page headings and contact details live in the database and can be edited from an admin dashboard without code.",
+    tags: ["Next.js 15", "TypeScript", "Prisma", "PostgreSQL", "Cloudinary", "Resend"],
+    href: "https://github.com/caliphridwan/favent_magna",
+    image: "/projects/favent-magna.jpg",
+    size: "sm",
+  },
+  {
+    title: "Naa'ib Associates — Hajj & Travel Platform",
+    discipline: "dev",
+    summary:
+      "A website and admin system for a Hajj and travel company. Package details only appear publicly once staff mark them verified, prices change only with a reason and an audit trail, and booking requests never secure a place until staff confirm the agreed total.",
+    tags: ["Next.js 15", "Prisma", "PostgreSQL", "Tailwind CSS 4", "Nodemailer"],
+    href: "https://github.com/caliphridwan/Naa-ib-Hajj-Umrah",
+    image: "/projects/naaib-hajj.jpg",
+    size: "sm",
+  },
+  {
+    title: "Markaz-ul-Igathah — Institution Website & Student Portal",
+    discipline: "dev",
+    summary:
+      "A website and portal for an Arabic and Islamic institution: admissions, student registration with automatic matric numbers, Paystack fee payments with QR receipts, printable ID cards, congregation membership, donations and an admin dashboard.",
+    tags: ["Next.js 15", "TypeScript", "Prisma", "PostgreSQL", "Paystack"],
+    href: "https://github.com/caliphridwan/markaz-ul-igathah",
+    image: "/projects/markaz.jpg",
+    size: "sm",
+  },
+  {
+    title: "Imam Idris A. Oni — Personal & Academic Website",
+    discipline: "dev",
+    summary:
+      "A Next.js rebuild of a scholar's official website, covering programmes, publications with downloadable documents, a blog, and contact pages, set up for Netlify deployment.",
+    tags: ["Next.js 14", "TypeScript", "Tailwind CSS", "Netlify"],
+    href: "https://github.com/caliphridwan/Imam_Idris",
+    image: "/projects/imam-idris.jpg",
+    size: "sm",
+  },
+  {
+    title: "Complex Spine & Scoliosis Surgery Clinic Website",
+    discipline: "dev",
+    summary:
+      "A Next.js rebuild of a surgical clinic's website with a patient journey timeline, team profiles with a shared profile modal, patient stories, an FAQ accordion and an enquiry form. All content lives in one editable data file.",
+    tags: ["Next.js 14", "React", "Content-driven"],
+    href: "https://github.com/caliphridwan/SurgeonMut",
+    image: "/projects/csssc-clinic.jpg",
+    size: "sm",
+  },
+  {
+    title: "Fila House — Traditional Caps Marketplace",
+    discipline: "dev",
+    summary:
+      "A full-stack store for local caps such as Atiku, Tangaran, Maroofiya and Bindo: category browsing, search, cart, delivery pricing by zone, Paystack checkout with server-side price and stock validation, and an admin panel.",
+    tags: ["Node.js", "Express", "PostgreSQL", "Paystack", "Cloudinary"],
+    href: "https://fila-house.onrender.com",
+    repo: "https://github.com/caliphridwan/FILA_HOUSE",
+    image: "/projects/caps.jpeg",
+    size: "sm",
+  },
+  {
+    title: "Automatic Name Frame System",
+    discipline: "dev",
+    summary:
+      "An ordering app for personalised Islamic name frames: customers search or type a name, preview it in the frame style, add it to a cart, pay online through Paystack, and the admin dashboard tracks orders and sends email notifications.",
+    tags: ["Node.js", "Express", "Paystack", "Email notifications"],
+    href: "https://github.com/caliphridwan/CRFRAMES",
+    image: "/projects/nameimg.jpeg",
     size: "sm",
   },
   {
@@ -162,16 +242,6 @@ export const projects: Project[] = [
     tags: ["Canva", "Brand system", "Design tokens"],
     href: "https://canva.link/0q3501lxp71zbje",
     image: "/projects/frame.jpeg",
-    size: "sm",
-  },
-  {
-    title: "Traditional Caps E-Commerce Platform",
-    discipline: "dev",
-    summary:
-      "A modern e-commerce platform designed to showcase and sell premium traditional Nigerian caps, including Zanna, Tangaran, Atiku, Bindo, and other culturally inspired headwear.",
-    tags: ["React", "Node.js", "NextJs"],
-    image: "/projects/caps.jpeg",
-    href: "https://fila-house.onrender.com",
     size: "sm",
   },
 ];
