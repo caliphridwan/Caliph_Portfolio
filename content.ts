@@ -302,3 +302,78 @@ export const experience: ExperienceItem[] = [
     description: "Best Graduating Student — Department of Computer Science & Economics, Faculty of Computer Science & Information Technology.",
   },
 ];
+
+// ────────────────────────────────────────────────────────────────
+// Headquarters content (used by the redesigned layout)
+// ────────────────────────────────────────────────────────────────
+
+// Drives the live "working hours overlap" board in the hero.
+// Change coreStart / coreEnd to match the hours you really want to offer.
+export const hq = {
+  city: "Ilorin",
+  timezone: "Africa/Lagos",
+  zoneLabel: "WAT",
+  coreStart: 9,
+  coreEnd: 18,
+  availability: "Open to remote roles worldwide",
+  partners: [
+    { label: "London", tz: "Europe/London" },
+    { label: "Berlin", tz: "Europe/Berlin" },
+    { label: "Dubai", tz: "Asia/Dubai" },
+    { label: "New York", tz: "America/New_York" },
+    { label: "San Francisco", tz: "America/Los_Angeles" },
+  ],
+};
+
+export const departments: Record<Discipline, { name: string; line: string }> = {
+  ai: {
+    name: "AI Automation",
+    line: "Workflows that take over the repetitive parts of a business, from the submitted form to the email that goes out.",
+  },
+  dev: {
+    name: "Full-Stack Development",
+    line: "Websites, portals and platforms with a database, payments and an admin dashboard your team can run without code.",
+  },
+  data: {
+    name: "Data Analysis",
+    line: "Spreadsheets and databases turned into dashboards that show what is selling and why.",
+  },
+  design: {
+    name: "Graphic Design",
+    line: "Brand, social and print visuals, including Arabic typography.",
+  },
+};
+
+export const process = [
+  {
+    title: "Brief",
+    text: "We agree what the project must do, who will use it and what already exists.",
+  },
+  {
+    title: "Design",
+    text: "I lay out the structure and visuals first, so changes are cheap.",
+  },
+  {
+    title: "Build",
+    text: "I build in working stages you can open and test, not one big reveal.",
+  },
+  {
+    title: "Launch",
+    text: "I deploy, document and hand over. Admin dashboards let your team update content without code.",
+  },
+];
+
+export const ways = [
+  {
+    title: "Join your team",
+    text: "Remote full-time or part-time roles in web development, automation or data.",
+  },
+  {
+    title: "Build a project",
+    text: "A website, portal or admin system, scoped and delivered end to end.",
+  },
+  {
+    title: "Automate a workflow",
+    text: "Connect forms, spreadsheets, email and payments so routine work runs itself.",
+  },
+];

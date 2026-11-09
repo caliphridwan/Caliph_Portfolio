@@ -1,28 +1,28 @@
 import Nav from "@/components/Nav";
 import Hero from "@/components/Hero";
-import About from "@/components/About";
-import Skills from "@/components/Skills";
-import Projects from "@/components/Projects";
-import Experience from "@/components/Experience";
+import Departments from "@/components/Departments";
+import WorkHub from "@/components/WorkHub";
+import Process from "@/components/Process";
+import Story from "@/components/Story";
 import Contact from "@/components/Contact";
 import BounceScroll from "@/components/BounceScroll";
 
 export default function Home() {
   return (
-    <main>
+    <>
+      {/* Nav stays outside BounceScroll: a transform on an ancestor breaks
+          sticky/fixed positioning. */}
       <Nav />
-      {/* Nav is deliberately outside BounceScroll: applying a transform
-          to an ancestor of a `position: fixed` element breaks that
-          fixed positioning, so the nav would otherwise drift with the
-          bounce instead of staying pinned. */}
-      <BounceScroll>
-        <Hero />
-        <Projects />
-        <Skills />
-        <About />
-        <Experience />
-        <Contact />
-      </BounceScroll>
-    </main>
+      <main>
+        <BounceScroll>
+          <Hero />
+          <Departments />
+          <WorkHub />
+          <Process />
+          <Story />
+          <Contact />
+        </BounceScroll>
+      </main>
+    </>
   );
 }

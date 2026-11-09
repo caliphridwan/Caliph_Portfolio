@@ -1,35 +1,38 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { Moon, Sun } from "lucide-react";
+import { Moon, Sun } from "./icons";
 
 type Theme = "dark" | "light";
 
 export default function ThemeToggle() {
-  // Starts null so we render nothing until we know the real theme —
-  // avoids briefly showing the wrong icon before hydration.
+  // Unknown until mounted, so the server HTML and first client render match.
   const [theme, setTheme] = useState<Theme | null>(null);
 
   useEffect(() => {
-    const stored = window.localStorage.getItem("theme");
-    const initial: Theme = stored === "light" || stored === "dark" ? stored : "dark";
-    setTheme(initial);
+    const current = document.documentElement.getAttribute("data-theme");
+    setTheme(current === "light" ? "light" : "dark");
   }, []);
 
   function toggle() {
-    const next: Theme = theme === "dark" ? "light" : "dark";
+    const next: Theme = theme === "light" ? "dark" : "light";
     setTheme(next);
     document.documentElement.setAttribute("data-theme", next);
-    window.localStorage.setItem("theme", next);
+    try {
+      window.localStorage.setItem("theme", next);
+    } catch {
+      /* storage blocked: the choice still applies for this visit */
+    }
   }
 
   return (
     <button
+      type="button"
       onClick={toggle}
-      aria-label={theme === "light" ? "Switch to dark mode" : "Switch to light mode"}
-      className="border-2 border-paper/30 p-2 text-paper transition-colors hover:border-paper"
+      aria-label={theme === "light" ? "Switch to dark theme" : "Switch to light theme"}
+      className="flex h-10 w-10 items-center justify-center rounded-full border border-subtle/40 text-ink transition-colors hover:border-ink"
     >
-      {theme === "light" ? <Moon size={18} /> : <Sun size={18} />}
+      {theme === "light" ? <Moon className="h-5 w-5" /> : <Sun className="h-5 w-5" />}
     </button>
   );
 }

@@ -1,40 +1,35 @@
 import type { Config } from "tailwindcss";
 
 const config: Config = {
-  content: [
-    "./app/**/*.{ts,tsx}",
-    "./components/**/*.{ts,tsx}",
-  ],
+  content: ["./app/**/*.{ts,tsx}", "./components/**/*.{ts,tsx}"],
   darkMode: ["selector", '[data-theme="dark"]'],
   theme: {
     extend: {
       colors: {
-        // Theme-aware tokens — values come from CSS variables set in
-        // globals.css, which flip based on [data-theme]. Using the
-        // rgb(var(...) / <alpha-value>) pattern keeps Tailwind's
-        // opacity modifiers (e.g. bg-ink/90) working normally.
-        ink: "rgb(var(--color-ink) / <alpha-value>)",
-        "ink-soft": "rgb(var(--color-ink-soft) / <alpha-value>)",
-        paper: "rgb(var(--color-paper) / <alpha-value>)",
-        "paper-dim": "rgb(var(--color-paper-dim) / <alpha-value>)",
-        muted: "rgb(var(--color-muted) / <alpha-value>)",
-        mist: "rgb(var(--color-mist) / <alpha-value>)",
-        // Discipline accents — also theme-aware now, so text/borders
-        // in these colors stay legible whichever theme is active.
-        ai: "rgb(var(--color-ai) / <alpha-value>)",
-        dev: "rgb(var(--color-dev) / <alpha-value>)",
-        data: "rgb(var(--color-data) / <alpha-value>)",
-        design: "rgb(var(--color-design) / <alpha-value>)",
+        // Theme-aware tokens (values live in app/globals.css).
+        canvas: "rgb(var(--canvas) / <alpha-value>)",
+        surface: "rgb(var(--surface) / <alpha-value>)",
+        ink: "rgb(var(--ink) / <alpha-value>)",
+        subtle: "rgb(var(--subtle) / <alpha-value>)",
+        live: "rgb(var(--live) / <alpha-value>)",
+        // Department colours as text/line accents (tuned per theme).
+        ai: "rgb(var(--ai) / <alpha-value>)",
+        dev: "rgb(var(--dev) / <alpha-value>)",
+        data: "rgb(var(--data) / <alpha-value>)",
+        design: "rgb(var(--design) / <alpha-value>)",
+        // Department colours as solid panels (same in both themes).
+        "block-ai": "#4A44E8",
+        "block-ai-fg": "#FFFFFF",
+        "block-dev": "#D4FF3F",
+        "block-dev-fg": "#14122E",
+        "block-data": "#FF4D8D",
+        "block-data-fg": "#14122E",
+        "block-design": "#FFA23E",
+        "block-design-fg": "#14122E",
       },
       fontFamily: {
-        display: ["var(--font-fraunces)", "serif"],
-        body: ["var(--font-space-grotesk)", "sans-serif"],
-      },
-      maxWidth: {
-        prose: "70ch",
-      },
-      borderWidth: {
-        3: "3px",
+        display: ["var(--font-fraunces)", "Georgia", "serif"],
+        body: ["var(--font-space-grotesk)", "system-ui", "sans-serif"],
       },
     },
   },
